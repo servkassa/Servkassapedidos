@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Serv Kassa · Mantenimiento integral en Córdoba</title>
+<meta name="description" content="Plomería, gas, electricidad, pintura, albañilería, piletas, parquización y limpieza. Mantenimiento para hogares y consorcios en Córdoba Capital.">
+<meta name="theme-color" content="#0B6378">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#0B6378; --teal-d:#084A5A; --teal-l:#CFE5EA; --ink:#17212B; --body:#3A4550; --muted:#4A5561;
+  --cream:#F5F2EC; --card:#FFFFFF; --line:#DCD6CB; --wa:#1F9D55;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--cream);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+svg{display:block}
+[hidden]{display:none!important}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Archivo,sans-serif;font-weight:800;letter-spacing:-.01em;line-height:1.05}
+h2{font-size:clamp(32px,5vw,46px)}
+h3{font-size:20px;font-weight:700}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+.lead{color:var(--body);font-size:18px;max-width:620px;margin-top:14px}
+section{padding:80px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:12px;border:0;font:700 16px Figtree,sans-serif;text-decoration:none;cursor:pointer;transition:background .15s,transform .1s}
+.btn:active{transform:scale(.97)}
+.btn-teal{background:var(--teal);color:#fff}.btn-teal:hover{background:var(--teal-d)}
+.btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}.btn-line:hover{background:#fff}
+.btn-wa{background:var(--wa);color:#fff}.btn-wa:hover{background:#178246}
+.btn-white{background:#fff;color:var(--teal)}
+.ico{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:rgba(245,242,236,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand i{width:38px;height:38px;border-radius:10px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font:800 18px Archivo,sans-serif;font-style:normal}
+.brand b{font:800 20px Archivo,sans-serif;letter-spacing:.08em}
+.links{display:flex;gap:26px;font-size:15px;font-weight:600}
+.links a{text-decoration:none;color:var(--body)}.links a:hover{color:var(--teal)}
+.nav .btn{min-height:40px;padding:8px 16px;font-size:15px}
+@media (max-width:860px){.links{display:none}}
+
+/* hero */
+.hero{padding:70px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(44px,7.5vw,80px);line-height:1.02;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chip{padding:7px 14px;border:1.5px solid var(--ink);border-radius:999px;font-size:14px;font-weight:600}
+.chip.hot{background:var(--teal);border-color:var(--teal);color:#fff}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero-card{background:var(--teal);color:#fff;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:22px;box-shadow:0 24px 50px rgba(11,99,120,.25)}
+.hero-card .big{font:800 64px/1 Archivo,sans-serif}
+.hero-card p{color:#E3F0F2}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fact{background:rgba(255,255,255,.1);border-radius:14px;padding:14px}
+.fact b{display:block;font:800 18px Archivo,sans-serif}
+.fact span{font-size:14px;color:#E3F0F2}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero{padding:44px 0 60px}}
+
+/* servicios */
+#servicios{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.svc{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px}
+.svc-head{display:flex;align-items:center;gap:10px;color:var(--teal)}
+.svc-head h3{color:var(--ink)}
+.svc ul{list-style:none;font-size:15px;color:var(--body);display:flex;flex-direction:column;gap:4px}
+.svc ul li::before{content:"· ";color:var(--teal);font-weight:700}
+.svc .ask{margin-top:auto;padding-top:6px;background:none;border:0;color:var(--teal);font:700 15px Figtree,sans-serif;cursor:pointer;text-align:left;min-height:44px}
+.svc .ask:hover{text-decoration:underline}
+.svc.dark{background:var(--ink);color:#fff;border-color:var(--ink);justify-content:center}
+.svc.dark .big{font:800 44px/1 Archivo,sans-serif}
+.svc.dark p{color:#D5DBE0;font-size:15px}
+.svc.new{background:var(--teal);border-color:var(--teal);color:#fff}
+.svc.new .svc-head,.svc.new .svc-head h3{color:#fff}
+.svc.new ul{color:#E3F0F2}.svc.new ul li::before{color:#fff}
+.svc.new .ask{color:#fff}
+.badge{margin-left:auto;padding:3px 10px;border-radius:999px;background:#fff;color:var(--teal);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+@media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.svc-grid{grid-template-columns:1fr}}
+
+/* pedido */
+.order-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start}
+.steps{display:flex;flex-direction:column;gap:20px;margin-top:30px}
+.step{display:flex;gap:14px}
+.step b{width:36px;height:36px;flex-shrink:0;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.step h3{font-family:Figtree,sans-serif;font-size:17px}
+.step p{font-size:15px;color:var(--body)}
+form.order{background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:16px;box-shadow:0 14px 34px rgba(23,33,43,.08)}
+form.order h3{font-size:22px}
+.seg{display:flex;background:var(--cream);border-radius:12px;padding:4px;gap:4px}
+.seg button{flex:1;min-height:42px;border:0;border-radius:9px;background:transparent;font:700 15px Figtree,sans-serif;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--teal);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label,.field .lbl{font-size:13px;font-weight:700;color:var(--muted)}
+.field input,.field textarea{width:100%;min-height:46px;padding:10px 12px;border:1px solid #C9C2B6;border-radius:10px;font:16px Figtree,sans-serif;color:var(--ink);background:#fff}
+.field textarea{min-height:90px;resize:vertical}
+.field input:focus,.field textarea:focus{outline:2px solid var(--teal);outline-offset:1px;border-color:var(--teal)}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pill{min-height:38px;padding:6px 13px;border:1px solid #C9C2B6;border-radius:999px;background:#fff;font:600 14px Figtree,sans-serif;color:var(--ink);cursor:pointer}
+.pill[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.check{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;color:var(--body)}
+.check input{width:20px;height:20px;accent-color:var(--teal)}
+.send-row{display:flex;flex-direction:column;gap:8px}
+.send-row .btn{width:100%}
+.send-row a.mail{text-align:center;font-size:14px;color:var(--teal);font-weight:600}
+.err{color:#A3361F;font-size:14px;font-weight:600}
+@media (max-width:900px){.order-grid{grid-template-columns:1fr}}
+
+/* consorcios */
+#consorcios{background:var(--ink);color:#fff}
+#consorcios .eyebrow{color:#7FC4D3}
+#consorcios .lead{color:#C9D1D8}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.plan{background:#212D39;border:1px solid #2E3B48;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.plan.pick{background:#fff;color:var(--ink);border:2px solid var(--teal)}
+.plan .top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.plan .price{font:700 20px Figtree,sans-serif;color:#7FC4D3}
+.plan.pick .price{color:var(--teal)}
+.plan .price small{font-size:14px;font-weight:600;color:#A9B4BE}
+.plan.pick .price small{color:var(--muted)}
+.plan hr{border:0;border-top:1px solid #2E3B48}
+.plan.pick hr{border-color:var(--line)}
+.plan ul{list-style:none;font-size:15px;display:flex;flex-direction:column;gap:6px;color:#D5DBE0}
+.plan.pick ul{color:var(--body)}
+.plan ul li::before{content:"✓ ";color:#7FC4D3;font-weight:700}
+.plan.pick ul li::before{color:var(--teal)}
+.plan .note{font-size:13px;color:#A9B4BE}
+.plan .btn{margin-top:auto}
+.extras{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.extra{background:#212D39;border:1px solid #2E3B48;border-radius:14px;padding:18px 20px}
+.extra .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.extra p{font-size:14px;color:#C9D1D8;margin-top:4px}
+.off{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:16px;padding:14px 20px;border:1px solid #2E3B48;border-radius:12px;font-size:14px;color:#D5DBE0}
+.off b{color:#fff}
+.fine{margin-top:16px;font-size:13px;color:#A9B4BE;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.fine span.tag{background:var(--teal);color:#fff;padding:5px 12px;border-radius:999px;font-weight:700}
+.start{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.start div b{display:block;font:800 30px/1 Archivo,sans-serif;color:#7FC4D3;margin-bottom:6px}
+@media (max-width:900px){.plans{grid-template-columns:1fr}.extras{grid-template-columns:1fr}.start{grid-template-columns:1fr 1fr}}
+
+/* por qué */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:36px}
+.why div{border-top:2px solid var(--ink);padding-top:16px}
+.why h3{font-family:Figtree,sans-serif;font-size:19px;margin-bottom:6px}
+.why p{font-size:15px;color:var(--body)}
+@media (max-width:900px){.why{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.why{grid-template-columns:1fr}}
+
+/* contacto */
+.contact{background:var(--teal);color:#fff}
+.contact h2{max-width:720px}
+.contact .lead{color:#E3F0F2}
+.cboxes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px;max-width:760px}
+.cbox{background:#fff;color:var(--ink);border-radius:14px;padding:18px 20px;text-decoration:none;display:block}
+.cbox small{display:block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.cbox b{font:800 clamp(18px,3vw,24px) Archivo,sans-serif;word-break:break-word}
+.sign{margin-top:28px;display:flex;flex-wrap:wrap;gap:6px 30px;font-size:15px;font-weight:600;color:#E3F0F2}
+@media (max-width:600px){.cboxes{grid-template-columns:1fr}}
+footer{background:var(--ink);color:#A9B4BE;text-align:center;font-size:14px;padding:24px 0}
+.fab{position:fixed;right:18px;bottom:18px;z-index:50;width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.fab svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio"><i>SK</i><b>SERV KASSA</b></a>
+    <nav class="links">
+      <a href="#servicios">Servicios</a>
+      <a href="#pedido">Pedir un servicio</a>
+      <a href="#consorcios">Consorcios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-teal" href="#pedido">Pedir servicio</a>
+  </div>
+</header>
+
+<main id="inicio">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Mantenimiento integral · Córdoba</p>
+      <h1>Tu casa o tu edificio, en manos de <em>un solo equipo.</em></h1>
+      <p class="lead">Plomería, gas, electricidad, pintura y albañilería, más piletas, parques y limpieza. Pedís el servicio en un minuto y te confirmamos día y horario.</p>
+      <div class="chips">
+        <span class="chip">Plomería</span><span class="chip">Gas</span><span class="chip">Electricidad</span><span class="chip">Pintura</span><span class="chip">Albañilería</span><span class="chip hot">Piletas, parques y limpieza</span>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-teal" href="#pedido">Pedir un servicio</a>
+        <a class="btn btn-line" href="#consorcios">Soy administrador</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="big">24 h</div>
+      <div><h3 style="font-size:24px">Guardia de urgencias</h3><p>Pérdidas, cortes de luz y bombas paradas no pueden esperar.</p></div>
+      <div class="facts">
+        <div class="fact"><b>Un contacto</b><span>Todos los rubros con un solo proveedor</span></div>
+        <div class="fact"><b>Con fotos</b><span>Antes y después de cada trabajo</span></div>
+        <div class="fact"><b>Presupuesto</b><span>Aprobado antes de empezar</span></div>
+        <div class="fact"><b>Córdoba</b><span>Capital y localidades aledañas</span></div>
+      </div>
+      <a class="btn btn-white wa-link" href="#" data-msg="Hola Serv Kassa, tengo una urgencia.">Avisar una urgencia</a>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <p class="eyebrow">Servicios</p>
+    <h2>Todo lo que tu casa o edificio necesita</h2>
+    <p class="lead">Mantenimiento preventivo, reparaciones y urgencias. Tocá un servicio para pedirlo.</p>
+    <div class="svc-grid">
+      <article class="svc">
+        <div class="svc-head"><svg class="ico" viewBox="0 0 24 24"><path d="M12 3c-3.5 4.5-6 7.7-6 11a6 6 0 0 0 12 0c0-3.3-2.5-6.5-6-11z"/></svg><h3>Plomería</h3></div>
+        <ul><li>Destapaciones y cloacas</li><li>Pérdidas y cañerías</li><li>Tanques, bombas y flotantes</li></ul>
+        <button class="ask" data-svc="Plomería">Pedir plomería →</button>
+      </article>
+      <article class="svc">
+        <div class="svc-head"><svg class="ico" viewBox="0 0 24 24"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 2 1.3 3 2.5 3.5C11.5 9 11 6 12 3z"/></svg><h3>Gas</h3></div>
+        <ul><li>Gasista matriculado</li><li>Detección de pérdidas</li><li>Calefones, termotanques y calderas</li></ul>
+        <button class="ask" data-svc="Gas">Pedir gasista →</button>
+      </article>
+      <article class="svc">
+        <div class="svc-head"><svg class="ico" viewBox="0 0 24 24"><path d="M13 3 5 13.5h6L10 21l8-10.5h-6L13 3z"/></svg><h3>Electricidad</h3></div>
+        <ul><li>Tableros y térmicas</li><li>Iluminación y tomas</li><li>Porteros eléctricos</li></ul>
+        <button class="ask" data-svc="Electricidad">Pedir electricista →</button>
+      </article>
+      <article class="svc">
+        <div class="svc-head"><svg class="ico" viewBox="0 0 24 24"><path d="M4 4h13v5H4z"/><path d="M17 6.5h3v5h-8.5v3"/><path d="M10 14.5h3V21h-3z"/></svg><h3>Pintura</h3></div>
+        <ul><li>Interiores, halls y escaleras</li><li>Fachadas y medianeras</li><li>Rejas y portones</li></ul>
+        <button class="ask" data-svc="Pintura">Pedir pintor →</button>
+      </article>
+      <article class="svc">
+        <div class="svc-head"><svg class="ico" viewBox="0 0 24 24"><path d="M3 6h8v4H3zM13 6h8v4h-8zM3 14h4v4H3zM9 14h8v4H9zM19 14h2v4h-2z"/></svg><h3>Albañilería</h3></div>
+        <ul><li>Humedad y filtraciones</li><li>Revoques, cerámicos y veredas</li><li>Membranas y terrazas</li></ul>
+        <button class="ask" data-svc="Albañilería">Pedir albañil →</button>
+      </article>
+      <article class="svc dark">
+        <div class="big">24 h</div>
+        <h3>Guardia de urgencias</h3>
+        <p>Pérdidas, cortes de luz y bombas paradas.</p>
+        <button class="ask" data-svc="Urgencia" style="color:#7FC4D3">Avisar urgencia →</button>
+      </article>
+      <article class="svc new">
+        <div class="svc-head"><svg class="ico" viewBox="0 0 24 24"><path d="M3 9c2.5-2 4.5-2 6 0s3.5 2 6 0 3.5-2 6 0M3 15c2.5-2 4.5-2 6 0s3.5 2 6 0 3.5-2 6 0"/></svg><h3>Piletas</h3><span class="badge">Nuevo</span></div>
+        <ul><li>Puesta a punto de temporada</li><li>Mantenimiento semanal</li><li>Control de cloro y pH, filtros y bombas</li></ul>
+        <button class="ask" data-svc="Piletas">Pedir piletero →</button>
+      </article>
+      <article class="svc new">
+        <div class="svc-head"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21v-8"/><path d="M12 13c-4 0-6-3-6-7 4 0 6 3 6 7z"/><path d="M12 11c0-4 2-7 6-7 0 4-2 7-6 7z"/><path d="M5 21h14"/></svg><h3>Parquización</h3><span class="badge">Nuevo</span></div>
+        <ul><li>Corte de césped y bordes</li><li>Poda de arbustos y cercos</li><li>Canteros, plantas y riego</li></ul>
+        <button class="ask" data-svc="Parquización">Pedir jardinero →</button>
+      </article>
+      <article class="svc new">
+        <div class="svc-head"><svg class="ico" viewBox="0 0 24 24"><path d="M14 3l-4 9"/><path d="M6 12h9l2 9H4z"/><path d="M9 16v5M12 16v5"/></svg><h3>Limpieza</h3><span class="badge">Nuevo</span></div>
+        <ul><li>Halls, palieres y escaleras</li><li>Cocheras y veredas</li><li>Vidrios, ascensores, salón y quincho</li></ul>
+        <button class="ask" data-svc="Limpieza">Pedir limpieza →</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="pedido">
+  <div class="wrap order-grid">
+    <div>
+      <p class="eyebrow">Pedir un servicio</p>
+      <h2>Cargá tu pedido en un minuto</h2>
+      <p class="lead">Completá el formulario y se abre WhatsApp con el pedido armado. Nos llega al instante.</p>
+      <div class="steps">
+        <div class="step"><b>1</b><div><h3>Contanos qué pasa</h3><p>Dirección, tipo de servicio y una descripción corta. Si podés, mandá fotos por WhatsApp.</p></div></div>
+        <div class="step"><b>2</b><div><h3>Confirmamos día y horario</h3><p>Las urgencias se atienden primero.</p></div></div>
+        <div class="step"><b>3</b><div><h3>Presupuesto antes de empezar</h3><p>Sabés cuánto sale antes de que toquemos nada.</p></div></div>
+        <div class="step"><b>4</b><div><h3>Trabajo terminado y registrado</h3><p>Con fotos de antes y después.</p></div></div>
+      </div>
+    </div>
+
+    <form class="order" id="orderForm" novalidate>
+      <h3>Nuevo pedido</h3>
+      <div class="seg" role="group" aria-label="Tipo de cliente">
+        <button type="button" data-who="hogar" aria-pressed="true">Casa / comercio</button>
+        <button type="button" data-who="consorcio" aria-pressed="false">Consorcio</button>
+      </div>
+      <div class="field">
+        <label for="name">Tu nombre</label>
+        <input id="name" autocomplete="name" placeholder="Nombre y apellido">
+      </div>
+      <div class="field" id="bldField" hidden>
+        <label for="bld">Edificio</label>
+        <input id="bld" placeholder="Ej: Torre Belgrano">
+      </div>
+      <div class="field">
+        <label for="addr">Dirección</label>
+        <input id="addr" autocomplete="street-address" placeholder="Calle, número y barrio">
+      </div>
+      <div class="field">
+        <span class="lbl" id="svcLbl">Servicio</span>
+        <div class="pills" id="pills" role="group" aria-labelledby="svcLbl">
+          <button type="button" class="pill" aria-pressed="false">Plomería</button>
+          <button type="button" class="pill" aria-pressed="false">Gas</button>
+          <button type="button" class="pill" aria-pressed="false">Electricidad</button>
+          <button type="button" class="pill" aria-pressed="false">Pintura</button>
+          <button type="button" class="pill" aria-pressed="false">Albañilería</button>
+          <button type="button" class="pill" aria-pressed="false">Piletas</button>
+          <button type="button" class="pill" aria-pressed="false">Parquización</button>
+          <button type="button" class="pill" aria-pressed="false">Limpieza</button>
+        </div>
+      </div>
+      <div class="field">
+        <label for="desc">¿Qué pasa?</label>
+        <textarea id="desc" placeholder="Ej: la bomba no arranca y el tanque está bajando"></textarea>
+      </div>
+      <label class="check"><input type="checkbox" id="urg"> Es urgente</label>
+      <p class="err" id="err" hidden>Elegí al menos un servicio y contanos qué pasa.</p>
+      <div class="send-row">
+        <button class="btn btn-wa" type="submit">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8zM12 .2C5.5.2.2 5.5.2 12c0 2.1.5 4.1 1.6 5.9L.1 23.9l6.1-1.6c1.7.9 3.7 1.5 5.7 1.5 6.5 0 11.8-5.3 11.8-11.8S18.5.2 12 .2z"/></svg>
+          Enviar pedido por WhatsApp
+        </button>
+        <a class="mail" href="#" id="mailLink">o enviarlo por mail</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="consorcios">
+  <div class="wrap">
+    <p class="eyebrow">Para consorcios</p>
+    <h2>Un abono mensual, sin sorpresas</h2>
+    <p class="lead">Una cuota fija por el mantenimiento preventivo de tu edificio, con prioridad en urgencias. Las reparaciones mayores se presupuestan aparte, con aprobación de la administración.</p>
+    <div class="plans">
+      <div class="plan">
+        <div class="top"><h3>Básico</h3></div>
+        <div class="price">Desde $80.000 <small>/ mes</small></div><hr>
+        <ul><li>1 visita por mes de hasta 4 h</li><li>Plomería, gas y electricidad</li><li>Prioridad en urgencias</li><li>Informe mensual</li></ul>
+        <a class="btn btn-line wa-link" style="color:#fff;box-shadow:inset 0 0 0 1.5px #fff" href="#" data-msg="Hola Serv Kassa, soy administrador y me interesa el plan Básico para un edificio.">Consultar</a>
+      </div>
+      <div class="plan pick">
+        <div class="top"><h3>Integral</h3><span class="badge" style="background:var(--teal);color:#fff">Sugerido</span></div>
+        <div class="price">Desde $220.000 <small>/ mes</small></div><hr>
+        <ul><li>2 visitas por mes de hasta 4 h</li><li>Todo lo del Básico</li><li>Pintura y albañilería menor</li><li>Guardia de urgencias 24 h</li><li>Hasta 2 h de arreglos menores</li></ul>
+        <a class="btn btn-teal wa-link" href="#" data-msg="Hola Serv Kassa, soy administrador y me interesa el plan Integral para un edificio.">Consultar</a>
+      </div>
+      <div class="plan">
+        <div class="top"><h3>Integral + Pileta</h3></div>
+        <div class="price">Desde $415.000 <small>/ mes</small></div><hr>
+        <ul><li>Todo lo del Integral</li><li>Puesta a punto de temporada</li><li>1 visita por semana en verano</li><li>Control de agua y registro</li><li>Productos químicos incluidos</li></ul>
+        <p class="note">Valor en temporada (diciembre a marzo)</p>
+        <a class="btn btn-line wa-link" style="color:#fff;box-shadow:inset 0 0 0 1.5px #fff" href="#" data-msg="Hola Serv Kassa, soy administrador y me interesa el plan Integral + Pileta para un edificio.">Consultar</a>
+      </div>
+    </div>
+    <div class="extras">
+      <div class="extra"><div class="top"><h3>Parquización</h3><span class="price" style="color:#7FC4D3;font-weight:700">Desde $75.000 / mes</span></div><p>Adicional · 2 visitas por mes. Corte, bordes y poda, con combustible incluido.</p></div>
+      <div class="extra"><div class="top"><h3>Limpieza</h3><span class="price" style="color:#7FC4D3;font-weight:700">Desde $195.000 / mes</span></div><p>Adicional · 1 visita por semana de 3 h en espacios comunes, con productos incluidos.</p></div>
+    </div>
+    <div class="off"><b>Fuera del abono</b><span>Hora adicional <b>$20.000</b></span><span>Urgencia de día <b>desde $40.000</b></span><span>Noche y fin de semana <b>desde $60.000</b></span><span>Materiales aparte</span></div>
+    <div class="fine"><span class="tag">Contratación mínima: 6 meses</span><span>Aplica a todos los planes y adicionales. Valores de septiembre de 2026, se actualizan cada 3 meses.</span></div>
+    <div class="start">
+      <div><b>1</b>Relevamiento gratuito del edificio</div>
+      <div><b>2</b>Informe con fotos</div>
+      <div><b>3</b>Propuesta a medida</div>
+      <div><b>4</b>Visitas e informes mensuales</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Por qué Serv Kassa</p>
+    <h2>Menos llamados, menos problemas</h2>
+    <div class="why">
+      <div><h3>Un solo proveedor</h3><p>Todos los rubros con un único contacto. Te olvidás de coordinar con varios técnicos.</p></div>
+      <div><h3>Respuesta en urgencias</h3><p>Guardia 24 h para los problemas que no pueden esperar.</p></div>
+      <div><h3>Todo documentado</h3><p>Fotos, informes e historial por edificio para rendir cuentas en asamblea.</p></div>
+      <div><h3>Presupuesto claro</h3><p>Sabés el precio antes de empezar. Sin sorpresas al final.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <h2>Pedí un relevamiento gratuito o tu primer servicio.</h2>
+    <p class="lead">Recorremos las instalaciones sin cargo y te dejamos un informe con lo que hay que atender primero.</p>
+    <div class="cboxes">
+      <a class="cbox wa-link" href="#" data-msg="Hola Serv Kassa, quiero hacer una consulta."><small>WhatsApp</small><b>351 364-6985</b></a>
+      <a class="cbox" href="mailto:servkassa@gmail.com"><small>Mail</small><b>servkassa@gmail.com</b></a>
+    </div>
+    <div class="sign"><span>Manuel Gil · Área de Ventas y Comercialización</span><span>Córdoba Capital y localidades aledañas</span></div>
+  </div>
+</section>
+
+</main>
+
+<footer>Serv Kassa · Mantenimiento integral para hogares, comercios y consorcios · Córdoba</footer>
+
+<a class="fab wa-link" href="#" data-msg="Hola Serv Kassa, quiero hacer una consulta." aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8zM12 .2C5.5.2.2 5.5.2 12c0 2.1.5 4.1 1.6 5.9L.1 23.9l6.1-1.6c1.7.9 3.7 1.5 5.7 1.5 6.5 0 11.8-5.3 11.8-11.8S18.5.2 12 .2z"/></svg></a>
+
+<script>
+const WA = "5493513646985", MAIL = "servkassa@gmail.com";
+const waURL = t => "https://wa.me/" + WA + "?text=" + encodeURIComponent(t);
+document.querySelectorAll(".wa-link").forEach(a => { a.href = waURL(a.dataset.msg || "Hola Serv Kassa!"); a.target = "_blank"; a.rel = "noopener"; });
+
+const $ = id => document.getElementById(id);
+let who = "hogar";
+document.querySelectorAll("[data-who]").forEach(b => b.onclick = () => {
+  who = b.dataset.who;
+  document.querySelectorAll("[data-who]").forEach(x => x.setAttribute("aria-pressed", x === b));
+  $("bldField").hidden = who !== "consorcio";
+});
+
+const pills = [...document.querySelectorAll("#pills .pill")];
+pills.forEach(p => p.onclick = () => p.setAttribute("aria-pressed", p.getAttribute("aria-pressed") !== "true"));
+
+/* "Pedir X" desde las tarjetas de servicios */
+document.querySelectorAll(".ask").forEach(b => b.onclick = () => {
+  const s = b.dataset.svc;
+  if (s === "Urgencia") $("urg").checked = true;
+  else pills.forEach(p => { if (p.textContent === s) p.setAttribute("aria-pressed", "true"); });
+  document.getElementById("pedido").scrollIntoView();
+  setTimeout(() => $("desc").focus({ preventScroll: true }), 400);
+});
+
+function buildMsg(){
+  const svcs = pills.filter(p => p.getAttribute("aria-pressed") === "true").map(p => p.textContent);
+  const desc = $("desc").value.trim();
+  if (!svcs.length && !$("urg").checked || !desc) { $("err").hidden = false; return null; }
+  $("err").hidden = true;
+  let t = ($("urg").checked ? "🚨 URGENTE\n" : "") + "Hola Serv Kassa! Quiero pedir un servicio:\n\n";
+  t += "Cliente: " + (who === "consorcio" ? "Consorcio" : "Casa / comercio") + "\n";
+  if ($("name").value.trim()) t += "Nombre: " + $("name").value.trim() + "\n";
+  if (who === "consorcio" && $("bld").value.trim()) t += "Edificio: " + $("bld").value.trim() + "\n";
+  if ($("addr").value.trim()) t += "Dirección: " + $("addr").value.trim() + "\n";
+  if (svcs.length) t += "Servicio: " + svcs.join(", ") + "\n";
+  t += "Qué pasa: " + desc;
+  return t;
+}
+$("orderForm").onsubmit = e => { e.preventDefault(); const t = buildMsg(); if (t) window.open(waURL(t), "_blank"); };
+$("mailLink").onclick = e => {
+  e.preventDefault(); const t = buildMsg(); if (!t) return;
+  const subj = "Pedido de servicio" + (who === "consorcio" && $("bld").value.trim() ? " · " + $("bld").value.trim() : "");
+  location.href = "mailto:" + MAIL + "?subject=" + encodeURIComponent(subj) + "&body=" + encodeURIComponent(t);
+};
+</script>
+</body>
+</html>
